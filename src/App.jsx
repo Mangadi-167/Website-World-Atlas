@@ -1,9 +1,22 @@
+import { Navbar } from "./components/navbar"
+import { Footer } from "./components/footer"
+import { Home } from "./pages/home" 
+import SearchBar from "./components/SearchBar";
+
 function App() {
 
 
   return (
     <div >
-      <h1 className="text-4xl text-red-600">Hello, World Atlas! </h1>
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Content */}
+      {/* <Home />         */}
+
+      {/* Footer */}
+      {/* <Footer /> */}
+      
     </div>
   )
 }
