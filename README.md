@@ -26,77 +26,73 @@ World Atlas dirancang dengan serangkaian fitur yang kaya untuk memberikan pengal
 
    - **Expandable Search**: Efek expandable search bar yang hemat ruang di tampilan desktop.
 
-📱 Desain Responsif Penuh: Tampilan yang dioptimalkan untuk semua ukuran layar, memastikan pengalaman yang konsisten baik di ponsel, tablet, maupun desktop.
+- **📱 Desain Responsif Penuh**: Tampilan yang dioptimalkan untuk semua ukuran layar, memastikan pengalaman yang konsisten baik di ponsel, tablet, maupun desktop.
 
-🚀 Navigasi Cepat: Dibangun sebagai Single Page Application (SPA) menggunakan React Router untuk perpindahan antar halaman yang instan tanpa reload.
+- **🚀 Navigasi Cepat: Dibangun** sebagai Single Page Application (SPA) menggunakan React Router untuk perpindahan antar halaman yang instan tanpa reload.
 
-💻 Teknologi yang Digunakan
+---
+
+## 💻 Teknologi yang Digunakan
 Proyek ini dibangun sepenuhnya di sisi frontend dengan fokus pada performa dan pengalaman pengembang.
 
-Framework: React.js (dengan Vite)
+- **Framework**: React.js (dengan Vite)
 
-Styling: Tailwind CSS
+- **Styling**: Tailwind CSS
 
-Komponen UI: Flowbite React
+- **Komponen UI**: Flowbite React
 
-Routing: React Router
+- **Routing**: React Router
 
-HTTP Client: Axios
+- **HTTP Client**: Axios
 
-Deployment: Vercel / Netlify
+- **Deployment**: Vercel / Netlify
 
-🚀 Cara Menjalankan Proyek
-Prasyarat
+---
+
+## 🚀 Cara Menjalankan Proyek
+### Prasyarat
 Pastikan Anda sudah menginstal Node.js (versi 16 atau lebih baru) dan npm di komputer Anda.
 
-Instalasi & Menjalankan
+### Instalasi & Menjalankan
 Ada dua cara untuk menjalankan proyek ini di komputer Anda:
 
-Opsi 1: Via git clone (Direkomendasikan)
-Clone repository ini
-Buka terminal Anda dan jalankan perintah berikut:
-
-git clone https://github.com/USERNAME_ANDA/NAMA_REPO_ANDA.git
-
-(Ganti USERNAME_ANDA dan NAMA_REPO_ANDA)
-
-Masuk ke direktori proyek
-
+#### Opsi 1: Via git clone (Direkomendasikan)
+1. Clone repository ini
+2. Buka terminal Anda dan jalankan perintah berikut:
+```bash
+git clone https://github.com/Mangadi-167/Website-World-Atlas.git
+```
+3. Masuk ke direktori proyek
+```bash
 cd NAMA_REPO_ANDA
-
-Install semua dependensi
-
+```
+4. Install tailwind
+```bash
 npm install
-
-Jalankan server pengembangan
-
+```
+5. Jalankan server pengembangan
+```bash
 npm run dev
+```
+Aplikasi akan berjalan di `http://localhost:5173`.
 
-Aplikasi akan berjalan di http://localhost:5173.
+## Opsi 2: Via Download ZIP
+1. Unduh File ZIP
+2. Klik tombol hijau <> Code di halaman utama repository GitHub, lalu pilih Download ZIP.
 
-Opsi 2: Via Download ZIP
-Unduh File ZIP
-Klik tombol hijau <> Code di halaman utama repository GitHub, lalu pilih Download ZIP.
+3. Ekstrak File
+4. Ekstrak file . dengan cara klik kanan kemudian pilih **Extract Here**.
+5. Buka Proyek di VS Code  lalu pilih File > Open Folder... dan pilih folder hasil ekstraksi tadi.
 
-Ekstrak File
-Ekstrak file .zip yang sudah Anda unduh ke lokasi yang Anda inginkan.
-
-Buka Proyek di VS Code
-Buka aplikasi Visual Studio Code, lalu pilih File > Open Folder... dan pilih folder hasil ekstraksi tadi.
-
-Buka Terminal
-Di dalam VS Code, buka terminal baru dengan memilih Terminal > New Terminal.
-
-Install semua dependensi
-Di dalam terminal, ketik perintah berikut dan tekan Enter:
-
+6. Buka Terminal. Di dalam VS Code, buka terminal baru dengan memilih Terminal > New Terminal.
+7. Install tailwind dengan cara ketik perintah berikut dan tekan Enter:
+```bash
 npm install
-
-Jalankan server pengembangan
-Setelah instalasi selesai, jalankan proyek dengan perintah:
-
+```
+8. Setelah instalasi selesai, jalankan proyek dengan perintah:
+```bash
 npm run dev
-
-Aplikasi akan berjalan di http://localhost:5173.
+```
+Aplikasi akan berjalan di `http://localhost:5173`.
 
 Terima kasih telah menjelajahi World Atlas! Proyek ini adalah demonstrasi dari implementasi fitur-fitur web modern dalam sebuah studi kasus yang nyata dan menarik.
