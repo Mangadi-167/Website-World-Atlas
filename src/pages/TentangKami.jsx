@@ -9,7 +9,7 @@ const TentangKami = () => {
             <img 
               src={AboutImage} 
               alt="Ilustrasi Peta Dunia" 
-              className="w-full max-w-md rounded-lg shadow-lg"
+              className="w-full max-w-md"
             />
           </div>
           <div className="text-container text-center lg:text-left">

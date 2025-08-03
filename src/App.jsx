@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from "./components/navbar"
 import { Footer } from "./components/footer"
-import { Home } from "./pages/Home";
-import { Negara } from './pages/Negara';
+import  Home  from "./pages/Home";
+import  Negara  from './pages/Negara';
 import  TentangKami  from './pages/TentangKami';
 import SearchBar from "./components/SearchBar";
+import CountryDetail from './pages/CountryDetail';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/negara" element={<Negara />} />
           <Route path="/tentang-kami" element={<TentangKami />} />
+          <Route path="/country/:countryName" element={<CountryDetail />} />
         </Routes>
         
         <Footer />
