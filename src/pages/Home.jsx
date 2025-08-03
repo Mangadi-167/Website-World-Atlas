@@ -3,9 +3,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import HeroImage from '../assets/images/hero2.png';
 import CountryCard from '../components/CountryCard';
+import usePageTitle from '../hooks/usePageTitle';
 
 
 const Home = () => {
+  usePageTitle('Beranda');
   return (
     <>
       <section className="homepage min-h-screen flex items-center pt-24 pb-12 lg:px-30">
@@ -65,7 +67,7 @@ const FeaturedCountriesSection = () => {
           <h1 className="text-center text-2xl lg:text-3xl font-medium dark:text-white">Jelajahi <span className="text-blue-700">250+</span> Negara</h1>
 
           <div className=" mt-4 text-right mb-4">
-              <a href="/negar" className='text-blue-500 hover:underline'>Lihat lainya</a>
+              <a href="/negara" className='text-blue-500 hover:underline'>Lihat lainya</a>
             </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

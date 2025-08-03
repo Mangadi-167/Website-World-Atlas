@@ -1,6 +1,8 @@
 import AboutImage from '../assets/images/peta.png';
+import usePageTitle from '../hooks/usePageTitle';
 
 const TentangKami = () => {
+  usePageTitle('Tentang Kami');
   return (
     <section className="homepage min-h-screen flex items-center pt-24 pb-12 lg:px-30">
       <div className="container mx-auto px-4">
