@@ -59,21 +59,21 @@ Ada dua cara untuk menjalankan proyek ini di komputer Anda:
 #### Opsi 1: Via git clone (Direkomendasikan)
 1. Clone repository ini
 2. Buka terminal Anda dan jalankan perintah berikut:
-```bash
-git clone https://github.com/Mangadi-167/Website-World-Atlas.git
-```
+   ```bash
+   git clone https://github.com/Mangadi-167/Website-World-Atlas.git
+   ```
 3. Masuk ke direktori proyek
-```bash
-cd NAMA_REPO_ANDA
-```
+   ```bash
+   cd NAMA_REPO_ANDA
+   ```
 4. Install tailwind
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 5. Jalankan server pengembangan
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 Aplikasi akan berjalan di `http://localhost:5173`.
 
 ## Opsi 2: Via Download ZIP
@@ -86,13 +86,13 @@ Aplikasi akan berjalan di `http://localhost:5173`.
 
 6. Buka Terminal. Di dalam VS Code, buka terminal baru dengan memilih Terminal > New Terminal.
 7. Install tailwind dengan cara ketik perintah berikut dan tekan Enter:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 8. Setelah instalasi selesai, jalankan proyek dengan perintah:
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 Aplikasi akan berjalan di `http://localhost:5173`.
 
 Terima kasih telah menjelajahi World Atlas! Proyek ini adalah demonstrasi dari implementasi fitur-fitur web modern dalam sebuah studi kasus yang nyata dan menarik.
