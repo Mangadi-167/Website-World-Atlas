@@ -3,7 +3,7 @@ import { Navbar } from "./components/navbar"
 import { Footer } from "./components/footer"
 import { Home } from "./pages/Home";
 import { Negara } from './pages/Negara';
-import { TentangKami } from './pages/TentangKami';
+import  TentangKami  from './pages/TentangKami';
 import SearchBar from "./components/SearchBar";
 
 

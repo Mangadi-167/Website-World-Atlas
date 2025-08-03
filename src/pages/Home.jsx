@@ -29,12 +29,45 @@ export const Home = () => {
 
 
 
-        <div className="">
+        <div className="my-12">
           <div className="h-auto mt-6">
             <h1 className="text-center text-2xl lg:text-3xl font-medium dark:text-white">Jelajahi <span className="text-blue-700">250+</span> Negara</h1>
-
+            
+            <div className=" mt-4 text-right">
+              <a href="/negar" className='text-blue-500 hover:underline'>Lihat lainya</a>
+            </div>
           
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12">
+
+
+              <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group dark:bg-gray-800">
+                <div class="relative">
+                  <img src="https://plus.unsplash.com/premium_photo-1680346529160-549ad950bd1f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image" class="w-full h-60 object-cover group-hover:scale-105 transition-transform" />
+                </div>
+                <div class="p-5">
+                  <h3 class="text-lg font-bold text-gray-900 mb-1 dark:text-white">Indonesia</h3>
+                  <p class="text-sm text-gray-500 mb-2 dark:text-gray-400">Memiliki 37 Provinsi</p>
+                  <div class="flex justify-between items-center mt-4">
+                    <span class="text-lg font-semibold text-blue-700">200jt Penduduk</span>
+                    <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 dark:bg-blue-700 dark:hover:bg-blue-500">Lihat</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group dark:bg-gray-800">
+                <div class="relative">
+                  <img src="https://plus.unsplash.com/premium_photo-1680346529160-549ad950bd1f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image" class="w-full h-60 object-cover group-hover:scale-105 transition-transform" />
+                </div>
+                <div class="p-5">
+                  <h3 class="text-lg font-bold text-gray-900 mb-1 dark:text-white">Indonesia</h3>
+                  <p class="text-sm text-gray-500 mb-2 dark:text-gray-400">Memiliki 37 Provinsi</p>
+                  <div class="flex justify-between items-center mt-4">
+                    <span class="text-lg font-semibold text-blue-700">200jt Penduduk</span>
+                    <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 dark:bg-blue-700 dark:hover:bg-blue-500">Lihat</button>
+                  </div>
+                </div>
+              </div>
+
               <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group dark:bg-gray-800">
                 <div class="relative">
                   <img src="https://plus.unsplash.com/premium_photo-1680346529160-549ad950bd1f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product Image" class="w-full h-60 object-cover group-hover:scale-105 transition-transform" />
