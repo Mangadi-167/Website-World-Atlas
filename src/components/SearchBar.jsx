@@ -1,9 +1,16 @@
 import React from 'react';
 
-function SearchBar({ value, onChange, placeholder, results }) {
+
+function SearchBar({ value, onChange, placeholder, results, onSearchSubmit }) {
+   const handleSubmit = (e) => {
+        e.preventDefault(); 
+        if (onSearchSubmit) {
+            onSearchSubmit(value); 
+        }
+    };
   return (
     <div className="relative w-full md:w-80">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
         <div className="relative">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">

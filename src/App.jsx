@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Navbar } from "./components/navbar"
+import { Navbar } from "./components/Navbar"
 import { Footer } from "./components/footer"
 import  Home  from "./pages/Home";
 import  Negara  from './pages/Negara';
@@ -9,7 +10,6 @@ import CountryDetail from './pages/CountryDetail';
 
 
 function App() {
-
 
   return (
      <BrowserRouter>

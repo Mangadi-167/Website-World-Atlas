@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import SearchBar from './SearchBar';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import SearchBar from '../components/SearchBar';
 
 export const Navbar = () => {
 
@@ -10,6 +10,7 @@ export const Navbar = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 5);
@@ -19,7 +20,11 @@ export const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    const handleSearchSubmit = (query) => {
+        if (query.trim() !== '') {
+            navigate(`/negara?q=${query}`);
+        }
+    };
     const isTransparent = location.pathname === '/' && !isScrolled;
     return (
         <nav className={`fixed w-full z-30 top-0 start-0 transition-all duration-300 ${isTransparent ? 'py-2 bg-transparent' : 'py-2 bg-white dark:bg-gray-900  dark:border-gray-600'}`}>
@@ -31,7 +36,7 @@ export const Navbar = () => {
                     <div className="hidden md:block">
                         {isSearchOpen ? (
                             <div className="flex items-center gap-2">
-                                <SearchBar value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search..." />
+                                <SearchBar value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search..." onSearchSubmit={handleSearchSubmit}/>
                                 <button onClick={() => setIsSearchOpen(false)} className="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                 </button>
@@ -50,7 +55,7 @@ export const Navbar = () => {
                 </div>
                 <div className={`items-center justify-between w-full md:flex md:w-auto md:order-2 ${isMenuOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
                     <div className="mt-4 md:hidden">
-                        <SearchBar value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Cari negara..." />
+                        <SearchBar value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Cari negara..." onSearchSubmit={handleSearchSubmit}/>
                     </div>
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
