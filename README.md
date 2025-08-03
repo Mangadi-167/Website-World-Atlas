@@ -16,7 +16,7 @@ World Atlas dirancang dengan serangkaian fitur yang kaya untuk memberikan pengal
 
 - **📄 Halaman Detail Informatif**: Setiap negara memiliki halaman detailnya sendiri yang menampilkan informasi penting seperti nama resmi, ibu kota, populasi, region, mata uang, dan bahasa yang digunakan.
 
-- **🌙 Mode Gelap & Terang**: Dilengkapi dengan toggle untuk mengubah tema UI sesuai preferensi Anda. Pilihan tema akan tersimpan di browser untuk kunjungan berikutnya.
+- **🌙 Mode Gelap & Terang**: Dilengkapi tema mode gelap. tema akan mengikuti sesuai tema device anda
 
 - **🎨 UI Interaktif & Dinamis**:
 
