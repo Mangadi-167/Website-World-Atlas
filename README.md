@@ -56,7 +56,7 @@ Pastikan Anda sudah menginstal Node.js (versi 16 atau lebih baru) dan npm di kom
 ### Instalasi & Menjalankan
 Ada dua cara untuk menjalankan proyek ini di komputer Anda:
 
-#### Opsi 1: Via git clone (Direkomendasikan)
+## Opsi 1: Via git clone (Direkomendasikan)
 1. Clone repository ini
 2. Buka terminal Anda dan jalankan perintah berikut:
    ```bash
