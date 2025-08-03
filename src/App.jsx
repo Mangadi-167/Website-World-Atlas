@@ -21,7 +21,7 @@ function App() {
           <Route path="/tentang-kami" element={<TentangKami />} />
         </Routes>
         
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </BrowserRouter>
   )

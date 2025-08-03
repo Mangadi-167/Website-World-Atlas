@@ -24,7 +24,7 @@ export const Navbar = () => {
     return (
         <nav className={`fixed w-full z-30 top-0 start-0 transition-all duration-300 ${isTransparent ? 'py-2 bg-transparent' : 'py-2 bg-white  dark:border-gray-600'}`}>
             <div className="max-w-screen-xl flex flex-wrap md:flex-nowrap items-center justify-between mx-auto p-4">
-                <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse md:order-1">
+                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse md:order-1">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">World <span class="text-blue-700">Atlas</span></span>
                 </a>
                 <div className="flex items-center md:order-3 space-x-2 rtl:space-x-reverse">
