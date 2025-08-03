@@ -1,6 +1,6 @@
 import { Navbar } from "./components/navbar"
 import { Footer } from "./components/footer"
-import { Home } from "./pages/home" 
+import { Home } from "./pages/Home" 
 import SearchBar from "./components/SearchBar";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
 
       {/* Content */}
-      {/* <Home />         */}
+      <Home />        
 
       {/* Footer */}
       {/* <Footer /> */}
