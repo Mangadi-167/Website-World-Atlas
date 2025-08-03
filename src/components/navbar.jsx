@@ -4,30 +4,48 @@ import SearchBar from './SearchBar';
 export const Navbar = () => {
 
     const [searchQuery, setSearchQuery] = useState('');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+
     return (
-        <div className="navbar fixed w-full transition-all py-4 ">
-            <div className="container mx-auto px-8 ">
-                <div className="navbar-box flex items-center justify-between ">
-                    <div className="logo">
-                        <h2 className="text-2xl font-bold">World Atlas</h2>
+        <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+            <div className="max-w-screen-xl flex flex-wrap md:flex-nowrap items-center justify-between mx-auto p-4">
+                <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse md:order-1">
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">World Atlas</span>
+                </a>
+                <div className="flex items-center md:order-3 space-x-2 rtl:space-x-reverse">
+                    <div className="hidden md:block">
+                        {isSearchOpen ? (
+                            <div className="flex items-center gap-2">
+                                <SearchBar value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search..." />
+                                <button onClick={() => setIsSearchOpen(false)} className="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                </button>
+                            </div>
+                        ) : (
+                            <button onClick={() => setIsSearchOpen(true)} className="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </button>
+                        )}
                     </div>
-                    <ul className="flex lg:gap-12 md:static md:bg-transparant  md:flex-row md-shadow-none md:w-auto md:h-full md:translate-y-0 gap-8  fixed left-106 top-38 -translate-y-1/2 flex-col px-8 py-6 rounded shadow-lg shadow-slate-200 transition-all">
-                        <li>
-                            <a href="" className="font-medium opacity-75">Beranda</a>
-                        </li>
-                        <li>
-                            <a href="" className="font-medium opacity-75">Negara</a>
-                        </li>
-                        <li>
-                            <a href="" className="font-medium opacity-75">Tentang</a>
-                        </li>
+                    <button onClick={() => setIsMenuOpen(!isMenuOpen)} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" /></svg>
+                    </button>
+                </div>
+                <div className={`items-center justify-between w-full md:flex md:w-auto md:order-2 ${isMenuOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
+                    <div className="mt-4 md:hidden">
+                        <SearchBar value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Cari negara..." />
+                    </div>
+                    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li><a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Beranda</a></li>
+                        <li><a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Negara</a></li>
+                        <li><a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Tentang Kami</a></li>
                     </ul>
-                        <div className="social" >
-                            <SearchBar value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search for a country..."/>
-                        </div>
                 </div>
             </div>
-        </div>
-
-    )
+        </nav>
+    );
 }

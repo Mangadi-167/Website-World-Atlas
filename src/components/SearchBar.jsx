@@ -1,30 +1,42 @@
 import React from 'react';
 
-function SearchBar({ value, onChange, placeholder }) {
+function SearchBar({ value, onChange, placeholder, results }) {
   return (
-    <div className="relative w-full md:w-50">
-      {/* Ikon Pencarian */}
-      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-slate-400">
-          <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>
-      </div>
+    <div className="relative w-full md:w-80">
+      <form>
+        <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <div className="relative">
+          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="default-search"
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder || "Search..."}
+            className="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+            autoComplete="off"
+          />
+        </div>
+      </form>
+      {results && results.length > 0 && (
+        <div className="absolute top-full mt-2 w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-10">
+          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
+            {results.map((item, index) => (
+              <li key={index}>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                  {item.name || item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
-      {/* Input Field */}
-      <input
-        type="search"
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder || "Search..."}
-        className="
-          block w-full p-2.5 pl-10 
-          text-sm text-slate-900 dark:text-slate-200
-          bg-slate-100 dark:bg-slate-700 
-          rounded-lg border border-transparent 
-          focus:ring-2 focus:ring-sky-500 focus:border-transparent
-          transition-all
-          placeholder:text-slate-400
-        "/>
     </div>
   );
 }
