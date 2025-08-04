@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+import usePageTitle from '../hooks/usePageTitle';
 
 const CountryDetail = () => {
+    usePageTitle('Detail Negara');
     const { countryName } = useParams(); 
     const [country, setCountry] = useState(null);
     const [loading, setLoading] = useState(true);
