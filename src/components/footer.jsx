@@ -15,7 +15,7 @@ export const Footer = () => {
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Menu</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://github.com/Mangadi-167" class="hover:underline ">Beranda</a>
+                          <a href="/" class="hover:underline ">Beranda</a>
                       </li>
                       <li class="mb-4">
                           <a href="/negara" class="hover:underline ">Negara</a>
